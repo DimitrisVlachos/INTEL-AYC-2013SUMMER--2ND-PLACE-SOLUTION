@@ -14,7 +14,7 @@ OBJ=$(SRC:src/%.cpp=obj/%.o)
 OBJ_MIC=$(SRC:src/%.cpp=obj/%.omic)
 OBJ_DEBUG=$(SRC:src/%.cpp=obj/%.odeb)
 
-TEAM_ID = e3b3f64b2db735915b5ee8d113f81073
+#TEAM_ID = e3b3f64b2db735915b5ee8d113f81073
 
 
 all:$(EXEC)
@@ -50,11 +50,11 @@ else
 	@echo "you need to put your TEAM_ID in the Makefile"
 endif
 
-submit: zip
-ifdef TEAM_ID
-	curl -F "file=@$(strip $(TEAM_ID)).zip" -L http://www.intel-software-academic-program.com/contests/ayc/upload/upload.php
-else
+#submit: zip
+#ifdef TEAM_ID
+#	curl -F "file=@$(strip $(TEAM_ID)).zip" -L http://www.intel-software-academic-program.com/contests/ayc/upload/upload.php
+#else
 	@echo "you need to put your TEAM_ID in the Makefile"
-endif
+#endif
 
 
